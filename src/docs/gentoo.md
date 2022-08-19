@@ -9,7 +9,7 @@ Preferred Gentoo configuration is:
 - no multilib
 - gnome
 - no split /usr
-  - [ref](https://leo3418.github.io/2021/01/16/gentoo-merge-usr.html)
+    - [ref](https://leo3418.github.io/2021/01/16/gentoo-merge-usr.html)
 
 ## Fedora Pre-Installation
 
@@ -18,10 +18,10 @@ to date. Default installation options are fine as long as the installation
 provides the following:
 
 - btrfs root
-  - Fedora installs to subvolume by default
+    - Fedora installs to subvolume by default
 - UEFI boot partition (ESP)
-  - Mounted at `/boot/efi`
-  - `/boot` is not a separate partition, though may be its own subvolume.
+    - Mounted at `/boot/efi`
+    - `/boot` is not a separate partition, though may be its own subvolume.
 - GUI environment
 - Working network
 - Working mouse (bluetooth, etc)
@@ -155,22 +155,22 @@ These files should likely be backup up in a git repo, sans things containing pri
 
 - `/etc/portage`
 - `/etc/containers`
-  - for `podman`
+    - for `podman`
 - `/etc/dracut.conf.d`
-  - for initramfs
+    - for initramfs
 - `/etc/efikeys`
-  - for custom secureboot keys
+    - for custom secureboot keys
 - `/etc/fstab`
 - `/etc/kernel`
-  - config overrides
-  - helper scripts (signing, etc)
+    - config overrides
+    - helper scripts (signing, etc)
 - `/etc/secureboot`
-  - copy of `efikeys`
+    - copy of `efikeys`
 - `/etc/systemd/zram-generator.conf`
-  - For `/var/tmp/portage` ramdisk
-  - Possibly swap too
+    - For `/var/tmp/portage` ramdisk
+    - Possibly swap too
 - `/etc/polkit-1/rules.d/49-wheel.rules`
-    - From https://leo3418.github.io/2021/04/24/gentoo-config-gnome-systemd.html#allow-users-in-wheel-group-to-use-their-own-credentials-for-authentication-in-gnome
+    - From <https://leo3418.github.io/2021/04/24/gentoo-config-gnome-systemd.html#allow-users-in-wheel-group-to-use-their-own-credentials-for-authentication-in-gnome>
 
 `/var/lib/portage/world` contains the set of installed packages. Could be good to keep
 this backed up as well.
